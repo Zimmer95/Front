@@ -1,0 +1,53 @@
+<mat-toolbar color="mat-accent" class="custom-toolbar">
+    <a [routerLink]="'/'"
+        mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+        ><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home">barra</mat-icon> 
+    </a>
+    <span>Portfolio Argentina Programa</span>
+    <span class="example-spacer"></span>
+    <button
+        *ngIf="!login.isLoggedIn()"
+        mat-button
+        style="margin: right 10px;"
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button"
+        [routerLink]="'/login'">
+    <a  *ngIf="!login.isLoggedIn()">
+        <span class="tama">Iniciar sesion</span>
+    </a>
+    </button>
+ 
+    <button
+        *ngIf="!login.isLoggedIn()"
+        mat-button
+        style="margin: right 10px;"
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button"
+        [routerLink]="'/signup'">
+    <a  *ngIf="!login.isLoggedIn()">
+        <span class="tama">Registrarse</span>
+    </a>
+    </button>
+    <button  
+        *ngIf="login.isLoggedIn()"
+        mat-button
+        style="margin: right 10px;"
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button"
+        (click) = selectProfile()>
+        <span class="tama">{{ login.getUser().username }}</span>
+    </button>
+    <button
+        *ngIf="login.isLoggedIn()"
+        mat-button
+        style="margin: right 10px;"
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button">
+    <a  *ngIf="login.isLoggedIn()"
+        (click) = logOut()>
+        <span class="tama">Cerrar sesion</span>
+    </a>
+    </button>
+   
+    
+</mat-toolbar>
