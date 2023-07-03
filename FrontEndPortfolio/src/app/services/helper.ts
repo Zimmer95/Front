@@ -1,2 +1,2 @@
-let baserUrl = 'http://localhost:8080'
+let baserUrl = 'https://portfoliobackendfinalprueba20mil.onrender.com'
 export default baserUrl;
