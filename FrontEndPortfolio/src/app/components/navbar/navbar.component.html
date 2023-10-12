@@ -1,53 +1,89 @@
-<mat-toolbar color="mat-accent" class="custom-toolbar">
-    <a [routerLink]="'/'"
-        mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
-        ><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home">barra</mat-icon> 
+<mat-toolbar style="background-color: #2020208e" class="custom-toolbar zetaIndexMenu">
+
+  <i class="fa-solid fa-house fa-xs" [routerLink]="'/'" style="color: silver"></i>
+  
+
+  <span class="example-spacer"></span>
+
+  <span class="espacios">
+  <button mat-button style="margin: right 10px" class="example-icon favorite-icon" aria-label="Example icon-button" >
+
+    <a class="nav-link" href="#educacion" style="text-decoration: none">
+      <span class="tama letraColor disminuir">EDUCACION</span>
     </a>
-    <span>Portfolio Argentina Programa</span>
-    <span class="example-spacer"></span>
-    <button
+
+  </button>
+
+  <button mat-button style="margin: right 10px" class="example-icon favorite-icon" aria-label="Example icon-button" >
+
+    <a class="nav-link" href="#experiencia" style="text-decoration: none">
+      <span class="tama letraColor disminuir">EXPERIENCIA</span>
+    </a>
+
+  </button>
+
+  <button mat-button style="margin: right 10px" class="example-icon favorite-icon" aria-label="Example icon-button" >
+
+    <a class="nav-link" href="#certificaciones" style="text-decoration: none">
+      <span class="tama letraColor disminuir">CERTIFICACIONES</span>
+    </a>
+
+  </button>
+  </span>
+
+
+    <i class="fa-solid fa-bars fa-sm" [matMenuTriggerFor]="menu" style="color: silver; text-decoration: none" ></i>
+
+
+  <mat-menu #menu="matMenu" class="zetaIndexMenu custom-menu">
+    <button mat-menu-item>
+      <button
         *ngIf="!login.isLoggedIn()"
         mat-button
-        style="margin: right 10px;"
+        style="margin: right 10px"
         class="example-icon favorite-icon"
         aria-label="Example icon-button"
-        [routerLink]="'/login'">
-    <a  *ngIf="!login.isLoggedIn()">
-        <span class="tama">Iniciar sesion</span>
-    </a>
+        [routerLink]="'/login'"
+      >
+        <a style="text-decoration: none" *ngIf="!login.isLoggedIn()">
+          <span class="tama letraColor">Iniciar sesion</span>
+        </a>
+      </button>
+      <button
+        *ngIf="login.isLoggedIn()"
+        mat-button
+        style="margin: right 10px"
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button"
+        (click)="selectProfile()"
+      >
+        <span class="tama letraColor">{{ login.getUser().username }}</span>
+      </button>
     </button>
- 
-    <button
+    <button mat-menu-item>
+      <button
         *ngIf="!login.isLoggedIn()"
         mat-button
-        style="margin: right 10px;"
+        style="margin: right 10px"
         class="example-icon favorite-icon"
         aria-label="Example icon-button"
-        [routerLink]="'/signup'">
-    <a  *ngIf="!login.isLoggedIn()">
-        <span class="tama">Registrarse</span>
-    </a>
-    </button>
-    <button  
+        [routerLink]="'/signup'"
+      >
+        <a style="text-decoration: none" *ngIf="!login.isLoggedIn()">
+          <span class="tama letraColor">Registrarse</span>
+        </a>
+      </button>
+      <button
         *ngIf="login.isLoggedIn()"
         mat-button
-        style="margin: right 10px;"
+        style="margin: right 10px"
         class="example-icon favorite-icon"
         aria-label="Example icon-button"
-        (click) = selectProfile()>
-        <span class="tama">{{ login.getUser().username }}</span>
+      >
+        <a (click)="logOut()">
+          <span class="tama letraColor">Cerrar sesion</span>
+        </a>
+      </button>
     </button>
-    <button
-        *ngIf="login.isLoggedIn()"
-        mat-button
-        style="margin: right 10px;"
-        class="example-icon favorite-icon"
-        aria-label="Example icon-button">
-    <a  *ngIf="login.isLoggedIn()"
-        (click) = logOut()>
-        <span class="tama">Cerrar sesion</span>
-    </a>
-    </button>
-   
-    
+  </mat-menu>
 </mat-toolbar>

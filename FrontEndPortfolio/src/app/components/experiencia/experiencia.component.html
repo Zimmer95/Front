@@ -1,38 +1,86 @@
-<div class="bootstrap-wrapper ">
-  <div class="container ">
-     <div class="row mt20 ">
-          <div class="col-md-6 offset-md-3 " >
-              <mat-card class="mb20 " >
-                  <div class="texte-center">
-                    <h1 class="texte-center">Experiencia Laboral</h1>
-                    <mat-grid-list cols="2" rowHeight="6:1">
-                      
-                      <mat-grid-tile>
-                        <span class="mr10">
-                          Gampel comunicaciones SRL
-                          <br>
-                          Empleado a tiempo parcial
-                          06/18 - 02/19
-                        </span>
-                        <div class="p-2 g-col-6"> <img class="bordeRedondeado" 
-                          src="https://github.com/Zimmer95/PortfolioFrontend/blob/main/portfolio/img/imagenGampel.png?raw=true"
-                          alt="Silicon Misiones" width="150" height="50"></div>
-                      </mat-grid-tile>
-                      <mat-grid-tile>
-                        <span class="mr10">
-                          Crediser Argentina SA
-                          <br>
-                          Empleado a tiempo parcial
-                          06/19 - ACTUALIDAD
-                        </span>
-                        <div class="p-2 g-col-6"><img class="bordeRedondeado"
-                          src="https://github.com/Zimmer95/PortfolioFrontend/blob/main/portfolio/img/imagenCrediser.png?raw=true"
-                          alt="datalytics" width="150" height="50"></div>
-                        </mat-grid-tile>
-                        </mat-grid-list>
-                  </div>
-              </mat-card>
+<mat-card class="matcard">
+  <div id="carouselExampleAutoplaying3" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying3"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying3"
+        data-bs-slide-to="1"
+        aria-current="true"
+        aria-label="Slide 2"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://github.com/Zimmer95/PortfolioFrontend/blob/main/portfolio/img/imagenGampel.png?raw=true"
+              class="card-img-top fotos"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>Gampel comunicaciones SRL</h2>
+              <h3>Empleado a tiempo parcial 04/18 - 05/19</h3>
+              <p class="card-text">
+                Como Especialista Técnico en Gampel Comunicaciones SRL, pasé un
+                año y nueve meses realizando reparaciones, administrando cobros
+                por servicios y manteniendo registros de clientes. Contribuí al
+                funcionamiento eficiente de la empresa, asegurando la
+                satisfacción del cliente y el éxito general.
+              </p>
+            </div>
           </div>
-     </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="../../../assets/imagenes/crediser22.png"
+              class="card-img-top fotos"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>Crediser Argentina SA</h2>
+              <h3>Empleado a tiempo parcial 06/19 - Actualidad</h3>
+              <p class="card-text">
+                Como Cajero-Vendedor en Crediser Argentina SA, una empresa
+                financiera nacional de créditos personales, durante tres años y
+                nueve meses, me encargué de conceder créditos, vender
+                electrodomésticos, brindar atención al cliente y realizar tareas
+                administrativas. Mi contribución fue esencial para el éxito y la
+                satisfacción de los clientes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleAutoplaying3"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleAutoplaying3"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-</div>
+</mat-card>

@@ -1,35 +1,78 @@
-<div class="bootstrap-wrapper">
-    <div class="container">
-       <div class="row mt20">
-            <div class="col-md-6 offset-md-3" >
-                <mat-card class="tercio-centrado mb20">
-                    <div class="container text-center mt20 mb20">
-                        <img src="../../../assets/imagenes/verificar.png" alt="" height="75" width="75">
-                    </div>
-                    <h1 class="text-center">Iniciar Sesion</h1>
-                    <div class="dostercios-centrado">
-                        <form (ngSubmit)="formSubmit()">
-                            <mat-form-field class="full-width" appearance="outline">
-                                <mat-label>Nombre de usuario</mat-label>
-                                <input [(ngModel)]="loginData.username" required name="username" matInput placeholder="Ingrese su nombre de usuario">
-                                <mat-hint>El nombre de usuario debe ser valido</mat-hint>
-                            </mat-form-field>
+<app-navbar></app-navbar>
 
-                            <mat-form-field class="full-width" appearance="outline">
-                                <mat-label>Contraseña</mat-label>
-                                <input [(ngModel)]="loginData.password" required name="password" type="password" matInput placeholder="Ingrese su contraseña">
-                                <mat-hint>La contraseña debe ser valida</mat-hint>
-                            </mat-form-field>
-                            <br>
-                            <br>
-                            <div class="container text-center mb20">
-                                <button  mat-raised-button color="primary">Ingresar</button>
-                                <button type="reset" style="margin-left : 20px" mat-raised-button color="ascent">cancelar</button>
-                            </div>
-                        </form> 
-                    </div>
-                </mat-card>
-            </div>
-       </div>
+<video
+  src="../../../assets/imagenes/manosmasculinassobreteclado.mp4"
+  autoplay="true"
+  muted="true"
+  loop="true"
+  poster="../../../assets/imagenes/notebookManoLibro.jpeg"
+></video>
+<section id="sect1" class="sect">
+
+  <div class="container">
+    <div class="row mt20">
+      <div class="col-md-6 mt10" style="max-height: 300px">
+        <img
+          class="full-width100"
+          src="../../../assets/imagenes/logo-no-background.svg"
+          alt=""
+          height="200"
+          width="200"
+        />
+      </div>
+      <div class="col-md-6">
+        <mat-card
+          class="mb20"
+          style="background-color: #2020208e; max-width: 600px; margin-top: 10%"
+        >
+          <div class="margins">
+            <form (ngSubmit)="formSubmit()">
+              <mat-form-field class="full-width">
+                <mat-label>Ingrese su nombre de usuario</mat-label>
+                <input
+                  [(ngModel)]="loginData.username"
+                  required
+                  name="username"
+                  matInput
+                  placeholder="Ingrese su nombre de usuario"
+                />
+              </mat-form-field>
+  
+              <mat-form-field class="full-width mt5">
+                <mat-label>Ingrese su contraseña</mat-label>
+                <input
+                  required
+                  [(ngModel)]="loginData.password"
+                  required
+                  name="password"
+                  type="password"
+                  matInput
+                  placeholder="Ingrese su contraseña"
+                  [type]="hide ? 'password' : 'text'"
+                />
+                <button
+                  mat-icon-button
+                  matSuffix
+                  (click)="hide = !hide"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide"
+                >
+                  <mat-icon>{{
+                    hide ? "visibility_off" : "visibility"
+                  }}</mat-icon>
+                </button>
+              </mat-form-field>
+  
+              <div class="">
+                <button class="full-width mt10" mat-flat-button color="primary">
+                  Ingresar
+                </button>
+              </div>
+            </form>
+          </div>
+        </mat-card>
+      </div>
     </div>
-</div>
+  </div>
+
+</section>

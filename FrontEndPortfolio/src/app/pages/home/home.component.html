@@ -1,3 +1,50 @@
-<div class="bg-6 abajo">
-    <div class="glitch" data-text="GLITCH EFFECT">BIENVENIDOS</div>
-</div>
+<app-navbar></app-navbar>
+<video
+  src="../../../assets/imagenes/coooding.mp4"
+  autoplay="true"
+  muted="true"
+  loop="true"
+  poster="../../../assets/imagenes/notebookManoLibro.jpeg"
+></video>
+<section id="sect1" class="sect">
+  <div id="carouselExampleAutoplaying2" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <app-encabezado></app-encabezado>
+      </div>
+      <div class="carousel-item">
+        <app-acerca-de></app-acerca-de>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleAutoplaying2"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleAutoplaying2"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+<section id="sect2" class="sect">
+  <h2 id="educacion"> Educacion </h2>
+  <app-educacion></app-educacion>
+</section>
+<section id="sect3" class="sect">
+  <h2 id="experiencia">Experiencia</h2>
+  <app-experiencia></app-experiencia>
+</section>
+<section id="sect4" class="sect">
+  <h2 id="certificaciones">Certificaciones</h2>
+  <app-certificaciones></app-certificaciones>
+</section>

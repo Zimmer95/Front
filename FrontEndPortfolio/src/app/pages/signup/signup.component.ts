@@ -11,6 +11,8 @@ import Swal from 'sweetalert2';
 
 export class SignupComponent implements OnInit {
 
+  hide: boolean = false;
+
   public user = {
     username:'',
     password:'',

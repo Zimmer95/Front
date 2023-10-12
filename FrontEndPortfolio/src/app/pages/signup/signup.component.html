@@ -1,50 +1,112 @@
-<div class="bootstrap-wrapper">
-    <div class="container">
-        <div class="row mt20">
-            <div class="col-md offset-md-3">
-                <mat-card class="tercio-centrado mb20 ">
-                <div class="container text-center mt20 ">
-                    <img src="../../../assets/imagenes/anadir.png" alt="" height="75" width="75">
-                </div>
-                <h1 class="text-center">Registrarse</h1>
-                <div class="dostercios-centrado">
-                <form (ngSubmit) = "formSubmit()">
 
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>Nombre de usuario</mat-label>
-                        <input required [(ngModel)]="user.username" name="username" matInput placeholder="Ingrese su nombre de usuario">
-                        <mat-hint>El nombre de usuario debe ser unico</mat-hint>
-                    </mat-form-field>
 
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>Contraseña</mat-label>
-                        <input required [(ngModel)]="user.password" name="password" type="password" matInput placeholder="Ingrese su contraseña">
-                    </mat-form-field>
+<app-navbar></app-navbar>
 
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>Nombre</mat-label>
-                        <input required [(ngModel)]="user.nombre" name="nombre" matInput placeholder="Ingrese su nombre">
-                    </mat-form-field>
+<video controls autoplay
+  src="../../../assets/imagenes/mujerFrenteANotebook.mp4"
+  muted="true"
+  loop="true"
+  poster="../../../assets/imagenes/notebookManoLibro.jpeg"
+></video>
+<section id="sect1" class="sect">
 
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>Apellido</mat-label>
-                        <input required [(ngModel)] = "user.apellido" name="apellido" matInput placeholder="Ingrese su apellido">
-                    </mat-form-field>
-
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label  >Email</mat-label>
-                        <input required [(ngModel)] = "user.email" name="email" type="email" matInput placeholder="Ingrese su email">
-                    </mat-form-field>
-
-                    <div class="container text-center mb20">
-                        <button  mat-raised-button color="primary">Registrar</button>
-                        <button type="reset" style="margin-left : 20px" mat-raised-button color="ascent">Limpiar</button>
-                    </div>
-                </form>
-                </div>
-                </mat-card>
-                <br><br><br>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row mt20">
+      <div class="col-md-6 mt10" style="max-height: 300px">
+        <img
+          class="full-width100"
+          src="../../../assets/imagenes/logo-no-background.svg"
+          alt=""
+          height="200"
+          width="200"
+        />
+      </div>
+      <div class="col-md-6">
+        <mat-card style="background-color: #2020208e; max-height: 540px">
+          <div style="margin-top: 2%">
+            <form style="margin: 20px" (ngSubmit)="formSubmit()">
+              <mat-form-field class="full-width mt5 mb1">
+                <mat-label>Nombre de usuario</mat-label>
+                <input
+                  required
+                  [(ngModel)]="user.username"
+                  name="username"
+                  matInput
+                  placeholder="Ingrese su nombre de usuario"
+                />
+                <mat-hint class="letraColor"
+                  >El nombre de usuario debe ser unico</mat-hint
+                >
+              </mat-form-field>
+  
+              <mat-form-field class="full-width mt5 mb1">
+                <mat-label>Ingrese su contraseña</mat-label>
+                <input
+                  required
+                  [(ngModel)]="user.password"
+                  name="password"
+                  type="password"
+                  matInput
+                  placeholder="Ingrese su contraseña"
+                  [type]="hide ? 'password' : 'text'"
+                />
+                <button
+                  mat-icon-button
+                  matSuffix
+                  (click)="hide = !hide"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide"
+                >
+                  <mat-icon>{{
+                    hide ? "visibility_off" : "visibility"
+                  }}</mat-icon>
+                </button>
+              </mat-form-field>
+  
+              <mat-form-field class="full-width mt5 mb1">
+                <mat-label>Nombre</mat-label>
+                <input
+                  required
+                  [(ngModel)]="user.nombre"
+                  name="nombre"
+                  matInput
+                  placeholder="Ingrese su nombre"
+                />
+              </mat-form-field>
+  
+              <mat-form-field class="full-width mt5 mb1">
+                <mat-label>Apellido</mat-label>
+                <input
+                  required
+                  [(ngModel)]="user.apellido"
+                  name="apellido"
+                  matInput
+                  placeholder="Ingrese su apellido"
+                />
+              </mat-form-field>
+  
+              <mat-form-field class="full-width mt5 mb1">
+                <mat-label>Email</mat-label>
+                <input
+                  required
+                  [(ngModel)]="user.email"
+                  name="email"
+                  type="email"
+                  matInput
+                  placeholder="Ingrese su email"
+                />
+              </mat-form-field>
+  
+              <div class="mb1">
+                <button class="full-width mt5" mat-flat-button color="primary">
+                  Ingresar
+                </button>
+              </div>
+            </form>
+          </div>
+        </mat-card>
+      </div>
     </div>
-</div>
+  </div>
+
+</section>

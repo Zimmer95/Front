@@ -13,6 +13,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { EncabezadoComponent } from './components/encabezado/encabezado.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { FormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
@@ -22,12 +23,15 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+
 import { authInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { DashboardUsuarioComponent } from './pages/user/dashboard-usuario/dashboard-usuario.component';
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 import {MatGridListModule} from '@angular/material/grid-list';
-
+import { AcercaDeComponent } from './components/acercaDe/acerca-de/acerca-de.component';
+import { CertificacionesComponent } from './components/certificaciones/certificaciones.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     ExperienciaComponent,
     EducacionComponent,
     DashboardComponent,
-    DashboardUsuarioComponent
+    DashboardUsuarioComponent,
+    AcercaDeComponent,
+    CertificacionesComponent
   ],
   imports: [
     FormsModule,
@@ -56,7 +62,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatToolbarModule,
     MatIconModule,
     CdkAccordionModule,
-    MatGridListModule
+    MatGridListModule,
+    FontAwesomeModule,
+    MatMenuModule    
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

@@ -1,0 +1,30 @@
+.matcard,
+div {
+  background-color: #20202000;
+}
+
+div img {
+  padding: 2%;
+  max-height: 300px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+div a {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+div p {
+  color: white;
+  min-height: 100px;
+  font-size: medium;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: white;
+  max-width: 1000px;
+  margin: 0 auto;
+}

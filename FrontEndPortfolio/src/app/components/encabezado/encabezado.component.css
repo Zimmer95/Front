@@ -1,45 +1,45 @@
-.contenedor_alado{
-    display: flex;
+.zetaIndex {
+  position: relative;
+  z-index: 9;
 }
 
-.colorBordeBoton {
-   border-color: #b6effb ;
-  }
-
-.posicionPerfil{
-  position:absolute;
-  left:10px;
-  top:100px;
+.posicionPerfil {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 10vh
 }
 
-.posicionInstituciones{
-  position:absolute;
-  right:0px;
-  top:0px;
-  block-size: 50px;
-  writing-mode: vertical-rl;
+.letraNombre {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
-.letraNombre{
- font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- font-size: 350%;
- font-weight: 100%;
-}
-
-.letraSubtit{
+.letraSubtit {
   font-size: 150%;
   font-weight: 70%;
- }
- 
-.posicionDerecha{
-  position:absolute;
-  right:0px;
-  border-radius: 5px;
-}
-.bordeRedondeado{
-  border-radius: 50%;
 }
 
-.inicioSesion{
-  margin-left : 50px;
+.bordeRedondeado {
+  border-radius: 50%;
+  object-fit: cover
+}
+
+.matcard,
+div {
+  background-color: #20202000;
+  
+}
+
+div img {
+  background-color: rgba(110, 110, 110, 0.411);
+  padding: 2%;
+  max-height: 200px;
+}
+
+div p {
+  color: white;
+  min-height: 100px;
+}
+
+h2 {
+  color: white;
 }

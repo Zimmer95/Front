@@ -1,0 +1,197 @@
+<mat-toolbar
+  style="background-color: #2020208e"
+  class="custom-toolbar zetaIndexMenu"
+>
+  <a
+    [routerLink]="'/'"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+    ><mat-icon
+      class="letraColor"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      fontIcon="home"
+      >barra</mat-icon
+    >
+  </a>
+  <span class="mdc-button__label"></span>
+  <span class="example-spacer"></span>
+
+  <button
+  mat-button
+  style="margin: right 10px"
+  class="example-icon favorite-icon"
+  aria-label="Example icon-button"
+>
+  <a class="nav-link" href="#educacion" style="text-decoration: none;">
+    <span class="tama letraColor">educacion</span>
+  </a>
+</button>
+<button
+mat-button
+style="margin: right 10px"
+class="example-icon favorite-icon"
+aria-label="Example icon-button"
+>
+<a class="nav-link" href="#experiencia" style="text-decoration: none;">
+  <span class="tama letraColor">experiencia</span>
+</a>
+</button>
+<button
+mat-button
+style="margin: right 10px"
+class="example-icon favorite-icon"
+aria-label="Example icon-button"
+>
+<a class="nav-link" href="#certificaciones" style="text-decoration: none;">
+  <span class="tama letraColor">certificaciones</span>
+</a>
+</button>
+
+  <button
+    mat-button
+    [matMenuTriggerFor]="menu"
+    style="color: silver; text-decoration: none"
+  >
+    <i class="fa-solid fa-bars fa-xl"></i>
+  </button>
+  <mat-menu #menu="matMenu" class="zetaIndexMenu custom-menu">
+    <button mat-menu-item>
+      <button
+        *ngIf="!login.isLoggedIn()"
+        mat-button
+        style="margin: right 10px"
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button"
+        [routerLink]="'/login'"
+      >
+        <a style="text-decoration: none;" *ngIf="!login.isLoggedIn()">
+          <span class="tama letraColor">Iniciar sesion</span>
+        </a>
+      </button>
+      <button
+        *ngIf="login.isLoggedIn()"
+        mat-button
+        style="margin: right 10px"
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button"
+        (click)="selectProfile()"
+      >
+        <span class="tama letraColor">{{ login.getUser().username }}</span>
+      </button>
+    </button>
+    <button mat-menu-item>
+      <button
+        *ngIf="!login.isLoggedIn()"
+        mat-button
+        style="margin: right 10px"
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button"
+        [routerLink]="'/signup'"
+      >
+        <a style="text-decoration: none;" *ngIf="!login.isLoggedIn()">
+          <span class="tama letraColor">Registrarse</span>
+        </a>
+      </button>
+      <button
+        *ngIf="login.isLoggedIn()"
+        mat-button
+        style="margin: right 10px"
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button"
+      >
+        <a (click)="logOut()">
+          <span class="tama letraColor">Cerrar sesion</span>
+        </a>
+      </button>
+    </button>
+  </mat-menu>
+</mat-toolbar>
+
+
+
+<nav id="navbar-example2" class="navbar px-3 mb-3 custom-toolbar zetaIndexMenu " style="margin-bottom:2px;background-color: #2020208e">
+  <a
+  [routerLink]="'/'"
+  mat-icon-button
+  class="example-icon"
+  aria-label="Example icon-button with menu icon"
+  ><mat-icon
+    class="letraColor"
+    aria-hidden="false"
+    aria-label="Example home icon"
+    fontIcon="home"
+    >barra</mat-icon
+  >
+</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item esconder">
+      <a class="nav-link tama letraColor esconder" href="#educacion" style="text-decoration: none;">Educacion</a>
+    </li>
+    <li class="nav-item esconder">
+      <a class="nav-link tama letraColor esconder" href="#experiencia" style="text-decoration: none;">Experiencia</a>
+    </li>
+    <li class="nav-item esconder">
+      <a class="nav-link tama letraColor esconder" href="#certificaciones" style="text-decoration: none;">Certificaciones</a>
+    </li>
+    <button
+    mat-button
+    [matMenuTriggerFor]="menu"
+    style="color: silver; text-decoration: none"
+  >
+    <i class="fa-solid fa-bars fa-xl"></i>
+  </button>
+  <mat-menu #menu="matMenu" class="zetaIndexMenu custom-menu">
+    <button mat-menu-item>
+      <button
+        *ngIf="!login.isLoggedIn()"
+        mat-button
+        style="margin: right 10px"
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button"
+        [routerLink]="'/login'"
+      >
+        <a style="text-decoration: none;" *ngIf="!login.isLoggedIn()">
+          <span class="tama letraColor">Iniciar sesion</span>
+        </a>
+      </button>
+      <button
+        *ngIf="login.isLoggedIn()"
+        mat-button
+        style="margin: right 10px"
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button"
+        (click)="selectProfile()"
+      >
+        <span class="tama letraColor">{{ login.getUser().username }}</span>
+      </button>
+    </button>
+    <button mat-menu-item>
+      <button
+        *ngIf="!login.isLoggedIn()"
+        mat-button
+        style="margin: right 10px"
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button"
+        [routerLink]="'/signup'"
+      >
+        <a style="text-decoration: none;" *ngIf="!login.isLoggedIn()">
+          <span class="tama letraColor">Registrarse</span>
+        </a>
+      </button>
+      <button
+        *ngIf="login.isLoggedIn()"
+        mat-button
+        style="margin: right 10px"
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button"
+      >
+        <a (click)="logOut()">
+          <span class="tama letraColor">Cerrar sesion</span>
+        </a>
+      </button>
+    </button>
+  </mat-menu>
+  </ul>
+</nav>

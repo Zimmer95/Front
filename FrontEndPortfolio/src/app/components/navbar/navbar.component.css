@@ -1,6 +1,10 @@
 .example-spacer{
     flex: 1 1 auto;
 }
+.espacios{
+    flex: 1 1 auto;
+}
 .custom-toolbar {
     height: 7%; /* Ancho personalizado */
   }
+

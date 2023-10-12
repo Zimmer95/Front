@@ -1,183 +1,441 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { 
-    margin: 0; 
-    font-family: Roboto, "Helvetica Neue", sans-serif; 
-    background: #f5f5f5;
-    background-image: url('../src/assets/imagenes/como-disenar-pagina-web-atractiv.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #f5f5f5;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 
-
-.text-center{
-    text-align: center;
+@media (max-width: 770px) {
+  h1 {
+    font-size: large !important;
+  }
+  .sacarMargen {
+    width: 60% !important;
+    margin-top: 1% !important;
+    margin-bottom: 1% !important;
+    margin-left: 25%;
+  }
+  .tamanoMin {
+    min-height: 90vw !important;
+    max-height: fit-content !important;
+  }
+  .esconder {
+    height: 1px !important;
+    width: 1px !important;
+  }
+  .disminuir{
+    height: 10px !important;
+    width: 10px !important;
+    font-size: 9px !important;
+  }
+  .acomodar {
+    margin-top: 7.5vh !important;
+  }
+  .minimo {
+    min-height: fit-content !important;
+  }
 }
 
-.full-width{
-    width: 100%;
+@media (min-width: 1200px) {
+  .tamaLetra {
+    font-size: 350% !important;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.maximo {
+  max-height: 90vh;
+  max-width: 90vw;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.minimo {
+  min-height: 90vh;
+  min-width: fit-content;
+}
+
+.limite {
+  min-height: 30vw !important;
+  min-width: 90vw;
+  max-height: 30vw;
+  max-width: 90%;
+}
+
+.div-center {
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.alinearDerecha {
+  margin-left: 50%;
+}
+
+.full-width {
+  width: 90%;
+  margin: 5%;
+}
+
+.full-width100 {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 25%;
+  margin-bottom: 25%;
+}
+
+.full-height {
+  height: 70%;
+  margin: 15%;
 }
 
 .tercio-centrado {
-    width: 33.33%;
-    margin: 0 auto; /* Esto centra horizontalmente el div */
+  margin: auto;
+  min-width: 300px;
+  min-height: fit-content;
+  max-width: 500px;
+  max-height: fit-content;
+  overflow: auto;
 }
 
-.dostercios-centrado {
-    width: 66.66%;
-    margin: 0 auto; /* Esto centra horizontalmente el div */
+.letraColor {
+  color: #dfd6d6 !important;
+  margin-bottom: 1rem;
 }
 
-.medio-centrado{
+.colorDeFondo {
+  background-color: dimgray !important;
+}
+
+.margins {
+  margin: 5% !important;
+}
+
+.medio-centrado {
   width: 50%;
   margin: 0 auto; /* Esto centra horizontalmente el div */
 }
 
-.mt20{
-    margin-top: 20px !important;
+.mb1 {
+  margin-bottom: 1px;
 }
 
-.ml20{
-    margin-left: 20px !important;
+.mt5 {
+  margin-top: 1px !important;
+  max-height: min-content;
 }
 
-.mt50{
-  margin-top: 20px !important ;
+.mt20 {
+  margin-top: 20px !important;
 }
 
-.ml70{
-    margin-left: 400px !important;
+.mt40 {
+  margin-top: 40px !important;
 }
 
-.mr60{
+.ml20 {
+  margin-left: 20px !important;
+}
+
+.mt50 {
+  margin-top: 10% !important ;
+}
+
+.mtporciento7 {
+  margin-top: 7% !important ;
+}
+
+.ml70 {
+  margin-left: 400px !important;
+}
+
+.mr60 {
   margin-right: 500px !important;
 }
 
-
-.mr10{
+.mr10 {
   margin-right: 15px !important;
 }
-.mt10{
-  margin-top: 15px;
+.mt10 {
+  margin-top: 10px;
 }
 
-.ml10{
+.ml10 {
   margin-left: 15px !important;
 }
 
-.mr20{
-    margin-right: 100px !important;
+.mr20 {
+  margin-right: 20px !important;
 }
 
-
-.mb20{
-    margin-bottom: 20px !important;
+.mb20 {
+  margin-bottom: 20px !important;
 }
 
-.tama{
-
-    font-size:medium;
+.mb10 {
+  margin-bottom: 10px !important;
 }
 
-.custom{
-    background-color: #000000;
+.tama {
+  font-size: medium;
+}
+
+.custom {
+  background-color: #000000;
 }
 
 .transparent-card {
-    background-color: rgba(255, 255, 255, 0.8); /* Ejemplo: Fondo blanco con transparencia del 50% */
-  }
-
-  
-.contenedor_alado{
-
-    display: flex;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Ejemplo: Fondo blanco con transparencia del 50% */
 }
 
-.colordefondo{
+.contenedor_alado {
+  display: flex;
+}
 
-background-color: #000;
-
+.colordefondo {
+  background-color: #000;
 }
 
 .colorBordeBoton {
-   border-color: #b6effb ;
-  }
-
-.posicionPerfil{
-  position:absolute;
-  left:10px;
-  top:100px;
+  border-color: #b6effb;
 }
 
-.posicionInstituciones{
-  position:absolute;
-  right:0px;
-  top:0px;
+.posicionPerfil {
+  position: absolute;
+  left: 10px;
+  top: 100px;
+}
+
+.posicionInstituciones {
+  position: absolute;
+  right: 0px;
+  top: 0px;
   block-size: 50px;
   writing-mode: vertical-rl;
 }
 
-.letraParaNegra{
- font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- font-weight: normal;
+.letraParaNegra {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
 }
 
-
-.posicionDerecha{
-  position:absolute;
-  right:0px;
+.posicionDerecha {
+  position: absolute;
+  right: 0px;
   border-radius: 5px;
 }
-.bordeRedondeado{
+.bordeRedondeado {
   border-radius: 5px;
 }
 
-.inicioSesion{
-  margin-left : 50px;
+.inicioSesion {
+  margin-left: 50px;
 }
 
-
-.contenedor_alado{
-
-    display: flex;
+.contenedor_alado {
+  display: flex;
 }
 
-.colordefondo{
-
-background-color: #000;
-
+.colordefondo {
+  background-color: #000;
 }
 
 .colorBordeBoton {
-   border-color: #b6effb ;
-  }
-
-.posicionPerfil{
-  position:absolute;
-  left:10px;
-  top:100px;
+  border-color: #b6effb;
 }
 
-.posicionInstituciones{
-  position:absolute;
-  right:0px;
-  top:0px;
+.posicionPerfil {
+  position: absolute;
+  left: 10px;
+  top: 200px;
+}
+
+.posicionInstituciones {
+  position: absolute;
+  right: 0px;
+  top: 0px;
   block-size: 50px;
   writing-mode: vertical-rl;
 }
 
-.letraParaNegra{
- font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- font-weight: normal;
+.letraParaNegra {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
 }
 
-
-.posicionDerecha{
-  position:absolute;
-  right:0px;
+.posicionDerecha {
+  position: absolute;
+  right: 0px;
   border-radius: 5px;
 }
-.bordeRedondeado{
+
+.bordeRedondeado {
   border-radius: 5px;
+}
+
+.fotos {
+  aspect-ratio: 3/2;
+  object-fit: scale-down;
+}
+
+.aspecto {
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+
+.zetaIndex {
+  position: relative;
+  z-index: 9999;
+}
+
+.colorBordeBoton {
+  border-color: #b6effb;
+}
+
+.posicionPerfil {
+  position: relative;
+  left: 10px;
+  top: 20%;
+}
+
+.fixedPerfil {
+  min-height: 200px; /* Establece la altura máxima a 300 píxeles */
+  overflow: auto; /* Agrega barras de desplazamiento si el contenido supera la altura máxima */
+}
+
+.posicionInstituciones {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  block-size: 50px;
+  writing-mode: vertical-rl;
+}
+
+.letraNombre {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-size: 350%;
+  font-weight: 100%;
+}
+
+.letraSubtit {
+  font-size: 150%;
+  font-weight: 70%;
+}
+
+.posicionDerecha {
+  position: absolute;
+  right: 0px;
+  border-radius: 5px;
+}
+.bordeRedondeado {
+  border-radius: 50%;
+}
+
+.inicioSesion {
+  margin-left: 50px;
+}
+
+.list-inline {
+  list-style: none;
+  text-align: center;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.btn-social {
+  display: inline-block;
+  border: 2px solid #fff;
+  background-color: silver;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 45px;
+}
+.btn-social,
+.scroll-top,
+.scroll-top .btn {
+  width: 50px;
+  height: 50px;
+}
+.btn-outline {
+  color: #fff;
+  font-size: 20px;
+  border: 2px solid #fff;
+  background: 0 0;
+  transition: all 0.3s ease-in-out;
+  margin-top: 15px;
+}
+
+.posicion {
+  margin: 150px 100px;
+}
+
+.tamano {
+  min-height: 350px;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  position: relative;
+}
+.mat-mdc-menu-content {
+  background-color: #000000;
+}
+.mat-mdc-menu-panel.mat-mdc-menu-panel {
+  opacity: 80%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+}
+.sect {
+  width: 100%;
+  min-height: 500px;
+}
+#sect1,
+#sect3,
+#sect2,
+#sect4 {
+  background-color: #3333337d;
+  color: #fff;
+}
+
+/* #sect2 {
+  background-color: #dddddd7d;
+  color: #ffffff;
+} */
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 105%;
+  min-height: 100%;
+  transform: translateX(calc((100% - 100vw) / 2));
+  z-index: -2;
 }
