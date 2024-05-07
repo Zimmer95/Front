@@ -1,10 +1,9 @@
-.example-spacer{
-    flex: 1 1 auto;
+.example-spacer {
+  flex: 1 1 auto;
 }
-.espacios{
-    flex: 1 1 auto;
+.espacios {
+  margin: 0 auto;
 }
-.custom-toolbar {
-    height: 7%; /* Ancho personalizado */
-  }
-
+.social {
+  text-align: center !important;
+}

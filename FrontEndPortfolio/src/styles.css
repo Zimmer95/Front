@@ -27,13 +27,13 @@ body {
     height: 1px !important;
     width: 1px !important;
   }
-  .disminuir{
+  .disminuir {
     height: 10px !important;
     width: 10px !important;
     font-size: 9px !important;
   }
   .acomodar {
-    margin-top: 7.5vh !important;
+    margin-top: 7.5vh ;
   }
   .minimo {
     min-height: fit-content !important;

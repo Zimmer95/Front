@@ -1,56 +1,52 @@
-import { UserService } from 'src/app/services/user.service';
-import { Component, OnInit} from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import Swal from 'sweetalert2';
+import { UserService } from "src/app/services/user.service";
+import { Component, OnInit } from "@angular/core";
+import { MatSnackBar } from "@angular/material/snack-bar";
+import Swal from "sweetalert2";
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  selector: "app-signup",
+  templateUrl: "./signup.component.html",
+  styleUrls: ["./signup.component.css"],
 })
-
 export class SignupComponent implements OnInit {
-
   hide: boolean = false;
 
   public user = {
-    username:'',
-    password:'',
-    nombre:'',
-    apellido:'',
-    email:'',
-  }
+    username: "",
+    password: "",
+    nombre: "",
+    apellido: "",
+    email: "",
+  };
 
-  constructor(private userService:UserService, private snak:MatSnackBar){}
+  constructor(private userService: UserService, private snak: MatSnackBar) {}
 
-  ngOnInit(): void{
-  }
+  ngOnInit(): void {}
 
-  formSubmit(){
-
+  formSubmit() {
     console.log(this.user);
-    if(this.user.username == '' || this.user.username == null){
-      this.snak.open("El nombre de usuario es requerido", "Aceptar",
-      {
-        duration:3000
-      }
-      )
+    if (this.user.username == "" || this.user.username == null) {
+      this.snak.open("El nombre de usuario es requerido", "Aceptar", {
+        duration: 3000,
+      });
       return;
     }
 
     this.userService.añadirUsuario(this.user).subscribe(
       (data) => {
         console.log(data);
-        Swal.fire("usuario guardado","usuario guardado con exito en la base de datos","success")
-      },(error)=> {
+        Swal.fire(
+          "usuario guardado",
+          "usuario guardado con exito en la base de datos",
+          "success"
+        );
+      },
+      (error) => {
         console.log(error);
-        this.snak.open("ha ocurrido un error", "Aceptar",
-        {
-          duration:3000,
-        }
-        )
-      } 
-    )
+        this.snak.open("ha ocurrido un error", "Aceptar", {
+          duration: 3000,
+        });
+      }
+    );
   }
-  
 }
